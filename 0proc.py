@@ -2,7 +2,9 @@
 # This script is for parsing the output from an ns-3 simulation trace file and calculating 
 # delivery ratio, dropped ratio, delay, hopct, and more.  the node number for source and sink
 # USAGE  ./0proc.py <inputfilename>
-# The nodes MUST be all have a unique last octet (Limited to 253 nodes)
+# CONSTRAINTS
+# - The nodes MUST all have a unique last octet (Limited to 253 nodes)
+# - Assume that IP address last octet is the node number+1
 # ToDo
 # -  Make code work for all IP address (not dependent on unique last octet)
 import sys
